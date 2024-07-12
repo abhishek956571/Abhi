@@ -5,8 +5,8 @@ var Snake = (function () {
 
   var intervalID;
 
-  var tileCount = 10;
-  var gridSize = 400/tileCount;
+  var tileCount = 15;
+  var gridSize = 300/tileCount;
 
   const INITIAL_PLAYER = { x: Math.floor(tileCount / 2), y: Math.floor(tileCount / 2) };
 
@@ -78,7 +78,7 @@ var Snake = (function () {
       },
       right: function () {
         if (lastAction != ActionEnum.left){
-          velocity.x = 1;
+          velocity.x =1;
           velocity.y = 0;
         }
       }
@@ -117,7 +117,7 @@ var Snake = (function () {
         if(player.y < 1) game.reset();
         if(player.y > tileCount-2) game.reset();
 
-        ctx.fillStyle = 'grey';
+        ctx.fillStyle = 'purple';
         ctx.fillRect(0,0,gridSize-1,canv.height);
         ctx.fillRect(0,0,canv.width,gridSize-1);
         ctx.fillRect(canv.width-gridSize+1,0,gridSize,canv.height);
@@ -184,7 +184,7 @@ var Snake = (function () {
         })());
       }
 
-      ctx.fillStyle = 'red';
+      ctx.fillStyle = 'yellow';
       ctx.fillRect(fruit.x * gridSize+1, fruit.y * gridSize+1, gridSize-2, gridSize-2);
 
       if(stopped) {
@@ -195,8 +195,10 @@ var Snake = (function () {
 
       ctx.fillStyle = 'white';
       ctx.font = "bold small-caps 16px Helvetica";
-      ctx.fillText("points: " + points, 288, 40);
-      ctx.fillText("top: " + pointsMax, 292, 60);
+      ctx.fillText("points: " + points, 
+      315, 40);
+      ctx.fillText("top: " + pointsMax, 
+      315, 60);
 
       return reward;
     }
@@ -239,7 +241,7 @@ var Snake = (function () {
   return {
     start: function (fps = 15) {
       window.onload = setup;
-      intervalID = setInterval(game.loop, 1000 / fps);
+      intervalID = setInterval(game.loop, 1500 / fps);
     },
 
     loop: game.loop,
