@@ -1,6 +1,6 @@
 var Snake = (function () {
 
-  const INITIAL_TAIL = 4;
+  const INITIAL_TAIL = 3;
   var fixedTail = true;
 
   var intervalID;
@@ -38,7 +38,7 @@ var Snake = (function () {
   var game = {
 
     reset: function () {
-      ctx.fillStyle = 'grey';
+      ctx.fillStyle = 'gray';
       ctx.fillRect(0, 0, canv.width, canv.height);
 
       tail = INITIAL_TAIL;

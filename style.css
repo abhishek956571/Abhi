@@ -16,7 +16,7 @@ body {
   text-align: center;
   width: 100%;
   padding: 10px;
-  box-sizing: border-box;
+  box-sizing: solid;
   height: 200px;
   margin: auto;
 }
@@ -27,7 +27,7 @@ body {
 }
 
 .chevron::before {
-  border-style: solid;
+  border-style:solid;
   border-width: 8px 8px 0 0;
   content: '';
   display: inline-block;
@@ -61,10 +61,10 @@ body {
   height: 70px;
   text-align: center;
   line-height: 100px;
-  background: gray;
+  background: red;
   color: white;
   font-size: 50px;
-  border-right: 10px solid #ccc;
+  border-right: 10px solid #ccc;;
   border-bottom: 10px solid #ccc;
   border-left: 10px solid #ddd;
   border-top: 10px solid #eee;
@@ -75,11 +75,11 @@ body {
 }
 
 .arr:active {
-  background: #555;
+  background: black;
 }
 
 #game-container {
   display: flex;
-  flex-direction: column;
+  flex-direction:column ;
   background-color: rgba(220, 220, 220, 0.6);
 }
